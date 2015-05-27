@@ -11,7 +11,7 @@
 
 @protocol MMARadioButtonViewDelegate <NSObject>
 @optional
-- (void) selectedButtonChanged: (id) radioButton toIndex: (NSInteger) index;
+- (void) selectedRadioButtonView: (id) radioButtonView usingRadioButton: (id) radioButton;
 
 @end
 

@@ -8,7 +8,7 @@
 
 #import "MMARadioButtonView.h"
 
-#define kLeftPadding 00
+#define kLeftPadding 15
 
 @interface MMARadioButtonView ()
 
@@ -62,8 +62,8 @@
             }
             [radiobutton setNeedsLayout];
             if (idx == self.radioButtons.count-1) {
-                if ([self.delegate respondsToSelector:@selector(selectedButtonChanged:toIndex:)]) {
-                    [self.delegate selectedButtonChanged:radioButton toIndex:selectedIndex];
+                if ([self.delegate respondsToSelector:@selector(selectedRadioButtonView:usingRadioButton:)]) {
+                    [self.delegate selectedRadioButtonView:self usingRadioButton:radioButton];
                 }
             }
         }];
